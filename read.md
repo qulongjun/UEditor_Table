@@ -7,11 +7,7 @@ UEditor是由百度web前端研发部开发所见即所得富文本web编辑器�
 
 ## 入门部署和体验 ##
 
-### 第一步：下载编辑器 ###
-
-到官网下载ueditor最新版：[[官网地址]](http://ueditor.baidu.com/website/download.html#ueditor "官网下载地址")
-
-### 第二步：创建demo文件 ###
+### 第一步：创建demo文件 ###
 解压下载的包，在解压后的目录创建demo.html文件，填入下面的html代码
 
 ```html
@@ -36,36 +32,28 @@ UEditor是由百度web前端研发部开发所见即所得富文本web编辑器�
 </html>
 ```
 
-### 第三步：在浏览器打开demo.html ###
+### 第二步：插入表格 ###
+在控制台输入如下代码即可插入默认(五行五列)的表格,也可以右键选择插入表格功能.
+```javascript
+    ueditor.execCommand("inserttable");
+```
 
-如果看到了下面这样的编辑器，恭喜你，初次部署成功！
-
-![部署成功](http://fex.baidu.com/ueditor/doc/images/demo.png)
 
 ### 自定义的参数
 
-编辑器有很多可自定义的参数项，在实例化的时候可以传入给编辑器：
+组件有很多可自定义的参数项，在实例化的时候可以传入给编辑器：
 ```javascript
-var ue = UE.getEditor('container', {
-    autoHeight: false
-});
+    此处待补充
 ```
 
 配置项也可以通过ueditor.config.js文件修改，具体的配置方法请看[前端配置项说明](http://fex.baidu.com/ueditor/#start-config1.4 前端配置项说明.md)
 
-### 设置和读取编辑器的内容
+### 设置表格的功能
 
-通getContent和setContent方法可以设置和读取编辑器的内容
+用户可以通过execCommand()命令对表格组件进行功绑定,具体如下:
+
 ```javascript
-var ue = UE.getContent();
-ue.ready(function(){
-    //设置编辑器的内容
-    ue.setContent('hello');
-    //获取html内容，返回: <p>hello</p>
-    var html = ue.getContent();
-    //获取纯文本内容，返回: hello
-    var txt = ue.getContentTxt();
-});
+    此处待补充
 ```
 
 ueditor的更多API请看[API 文档](http://ueditor.baidu.com/doc "ueditor API 文档")
